@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #403E3B;
+  --secondary-color: #645C55;
+  --third-color: #1B1A1A;
+  --fourth-color: #ECE7E4;
+  --fifth-color: #FFFFFF;
+  --primary-font: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+}
+
+ul {
+  list-style: none;
+}
+
+:link,
+:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  padding: 35px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--fourth-color);
+
+  nav,
+  ul {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  li {
+    cursor: pointer;
+    transition: 0.5s;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid var(--third-color);
+      transition: 0.5s;
+    }
+
+    a {
+      color: var(--third-color) !important;
+      font-size: 15px;
+    }
+  }
+
+  button {
+    width: 155px;
+    height: 46px;
+    border: 1px solid var(--third-color);
+    border-radius: 14px;
+    background-color: transparent;
+    color: var(--third-color);
+    font-size: 16px;
+    font-weight: 400px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: var(--third-color);
+      color: var(--fifth-color);
+      border: 1px solid var(--third-color);
+      transition: 0.5s;
+    }
+  }
+}
+
+main {
+  .hero {
+    display: flex;
+    align-items: center;
+    background-color: var(--fourth-color);
+
+    article {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 77px 60px;
+      padding: 60px 40px 40px;
+
+      span {
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 20px;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 64px;
+        line-height: 70px;
+        color: var(--third-color);
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 16px;
+        color: var(--primary-color);
+      }
+
+      button {
+        width: 133px;
+        height: 46px;
+        border: 1px solid var(--third-color);
+        border-radius: 14px;
+        background-color: transparent;
+        color: var(--third-color);
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: var(--third-color);
+          color: var(--fifth-color);
+          border: 1px solid var(--third-color);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  .about {
+    box-sizing: border-box;
+    /* margin: 100px 336px; */
+    display: flex;
+    gap: 133px;
+  }
+}

@@ -353,3 +353,90 @@ main {
       margin-left: 75px;
     }
   }
+
+  .projects {}
+}
+
+footer {
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 136px;
+    background-color: #CEC4BC;
+
+    span {
+      font-size: 14px;
+      letter-spacing: 2px;
+      line-height: 20px;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 40px;
+      line-height: 42px;
+      color: var(--third-color);
+      font-weight: 400;
+    }
+
+    button {
+      width: 125px;
+      height: 44px;
+      border: none;
+      background-color: transparent;
+      color: var(--third-color);
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      border-radius: 14px;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--third-color);
+        color: var(--fifth-color);
+        border: 1px solid var(--third-color);
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 60px 136px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        margin-bottom: 20px;
+      }
+
+      a:last-child {
+        margin-bottom: 0;
+      }
+
+      span,
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--secondary-color);
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      li {}
+    }
+  }

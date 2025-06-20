@@ -365,37 +365,119 @@ main {
     ul {
       display: flex;
       gap: 18px;
+      justify-content: space-between;
 
       li {
-        width: 300px;
-        height: 300px;
-        position: relative;
         overflow: hidden;
-        border-radius: 20px;
+        position: relative;
+
+        /* :hover {
+
+          span,
+          h4,
+          button {
+            opacity: 1;
+          }
+        } */
+
+        /* :not(:hover) {
+
+          span,
+          h4,
+          button {
+            opacity: 0;
+          }
+        } */
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           transition: transform 0.5s;
+          z-index: -1;
         }
 
         &:hover img {
-          transform: scale(1.1);
+          transform: scale(1.05);
           transition: transform 0.5s;
+        }
+
+        span {
+          position: absolute;
+          top: 40px;
+          left: 40px;
+          font-size: 14px;
+          letter-spacing: 2px;
+          line-height: 20px;
+          color: var(--secondary-color);
+          text-transform: uppercase;
         }
 
         h4 {
           position: absolute;
-          bottom: 20px;
-          left: 20px;
-          font-size: 18px;
-          line-height: 26px;
-          color: var(--fifth-color);
-          background-color: rgba(0, 0, 0, 0.5);
-          padding: 10px;
-          border-radius: 10px;
+          top: 55px;
+          left: 40px;
+          font-size: 23px;
+          line-height: 30px;
+          color: var(--primary-color);
+
+          /* &:not(:hover) {
+            opacity: 0;
+          } */
         }
+
+        button {
+          position: absolute;
+          bottom: 40px;
+          left: 45px;
+          width: 133px;
+          height: 46px;
+          border-radius: 14px;
+          border: 1px solid var(--third-color);
+          background-color: var(--fifth-color);
+          color: var(--third-color);
+          transition: 0.5s;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.4px;
+
+          &:hover {
+            background-color: var(--third-color);
+            color: var(--fifth-color);
+            border: 1px solid var(--third-color);
+            transition: 0.5s;
+          }
+
+          /* &:not(:hover) {
+            opacity: 0;
+          } */
+        }
+
+        button:not(:hover) {
+          opacity: 1;
+        }
+
+        :not(:hover)>button {
+          opacity: 0;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      margin-top: 50px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      color: var(--third-color);
+      border-bottom: 1px solid transparent;
+      transition: 0.5s;
+
+      &:hover {
+        border-bottom: 1px solid var(--third-color);
+        transition: 0.5s;
       }
     }
   }

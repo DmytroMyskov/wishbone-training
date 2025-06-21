@@ -137,13 +137,13 @@ main {
 
     div {
       display: flex;
-      flex-direction: column;
       align-items: flex-start;
       gap: 20px;
 
       h2 {
         font-size: 32px;
         line-height: 38px;
+        white-space: nowrap;
       }
 
       p {
@@ -371,24 +371,6 @@ main {
         overflow: hidden;
         position: relative;
 
-        /* :hover {
-
-          span,
-          h4,
-          button {
-            opacity: 1;
-          }
-        } */
-
-        /* :not(:hover) {
-
-          span,
-          h4,
-          button {
-            opacity: 0;
-          }
-        } */
-
         img {
           width: 100%;
           height: 100%;
@@ -402,6 +384,10 @@ main {
           transition: transform 0.5s;
         }
 
+        &:not(:hover)>:not(:first-child) {
+          opacity: 0;
+        }
+
         span {
           position: absolute;
           top: 40px;
@@ -411,6 +397,7 @@ main {
           line-height: 20px;
           color: var(--secondary-color);
           text-transform: uppercase;
+          transition: 0.5s;
         }
 
         h4 {
@@ -420,10 +407,7 @@ main {
           font-size: 23px;
           line-height: 30px;
           color: var(--primary-color);
-
-          /* &:not(:hover) {
-            opacity: 0;
-          } */
+          transition: 0.5s;
         }
 
         button {
@@ -448,10 +432,6 @@ main {
             border: 1px solid var(--third-color);
             transition: 0.5s;
           }
-
-          /* &:not(:hover) {
-            opacity: 0;
-          } */
         }
 
         button:not(:hover) {
@@ -465,6 +445,8 @@ main {
     }
 
     a {
+      width: max-content;
+      margin-inline: auto;
       display: block;
       margin-top: 50px;
       text-align: center;
